@@ -25,12 +25,12 @@ const checkStoreStatus = () => {
     const isOpen = currentTime >= openTime && currentTime < closeTime;
     
     if (isOpen) {
-        statusBadge.textContent = 'Aberto agora';
+        statusBadge.querySelector('.status-text').textContent = 'Aberto agora';
         statusBadge.classList.add('open');
         statusBadge.classList.remove('closed');
         closedBanner.classList.add('hidden');
     } else {
-        statusBadge.textContent = 'Fechado';
+        statusBadge.querySelector('.status-text').textContent = 'Fechado';
         statusBadge.classList.add('closed');
         statusBadge.classList.remove('open');
         closedBanner.classList.remove('hidden');
