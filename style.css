@@ -156,7 +156,7 @@ body {
 /* Search Container repositioned to float */
 .search-container {
     position: absolute;
-    bottom: -30px;
+    bottom: -44px;
     left: 50%;
     transform: translateX(-50%);
     width: 90%;
@@ -169,7 +169,7 @@ body {
 .search-container input {
     width: 100%;
     padding: 16px 50px 16px 24px;
-    border-radius: 50px;
+    border-radius: 999px;
     border: none;
     background: white;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
