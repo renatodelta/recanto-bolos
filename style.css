@@ -1,9 +1,12 @@
 :root {
-    --primary: #3d2b1f; /* Marrom Chocolate Intenso */
+    --primary: #3d2b1f;
+    /* Marrom Chocolate Intenso */
     --primary-light: #4a3728;
-    --accent: #c9a66b; /* Dourado Logo */
+    --accent: #c9a66b;
+    /* Dourado Logo */
     --accent-light: #dfc18d;
-    --bg-color: #faf7f2; /* Creme suave */
+    --bg-color: #faf7f2;
+    /* Creme suave */
     --card-bg: #ffffff;
     --text-main: #2d1a08;
     --text-muted: #8c7a6b;
@@ -17,7 +20,7 @@
 /* Simulação de textura de madeira */
 .wood-texture {
     background-color: #fdfaf6;
-    background-image: 
+    background-image:
         repeating-linear-gradient(90deg, transparent, transparent 50px, rgba(210, 193, 174, 0.1) 50px, rgba(210, 193, 174, 0.1) 100px),
         linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5));
 }
@@ -31,7 +34,7 @@
 body {
     font-family: 'Outfit', sans-serif;
     background-color: var(--bg-color);
-    background-image: 
+    background-image:
         repeating-linear-gradient(90deg, transparent, transparent 50px, rgba(210, 193, 174, 0.05) 50px, rgba(210, 193, 174, 0.05) 100px),
         linear-gradient(rgba(253, 250, 246, 0.8), rgba(253, 250, 246, 0.8));
     color: var(--text-main);
@@ -49,7 +52,7 @@ body {
     color: white;
     border-bottom-left-radius: 60px;
     border-bottom-right-radius: 60px;
-    box-shadow: 0 15px 35px rgba(0,0,0,0.2);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
     margin-bottom: 80px;
     overflow: visible;
 }
@@ -62,7 +65,7 @@ body {
     left: 0;
     width: 100%;
     height: 80px;
-    background-image: 
+    background-image:
         radial-gradient(circle at 10% 0%, var(--primary) 40px, transparent 41px),
         radial-gradient(circle at 25% 0%, var(--primary) 55px, transparent 56px),
         radial-gradient(circle at 45% 0%, var(--primary) 35px, transparent 36px),
@@ -80,8 +83,8 @@ body {
 }
 
 .store-logo {
-    width: 130px;
-    height: 130px;
+    width: 160px;
+    height: 160px;
     aspect-ratio: 1 / 1;
     object-fit: cover;
     border-radius: 50%;
@@ -122,7 +125,7 @@ body {
     color: white;
     border-bottom-left-radius: 40px;
     border-bottom-right-radius: 40px;
-    box-shadow: 0 15px 35px rgba(0,0,0,0.15);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
     margin-bottom: 60px;
     overflow: visible;
 }
@@ -246,7 +249,8 @@ body {
 
 .product-grid {
     display: grid;
-    grid-template-columns: 1fr; /* Default mobile is 1 col for impact */
+    grid-template-columns: 1fr;
+    /* Default mobile is 1 col for impact */
     gap: 20px;
 }
 
@@ -379,7 +383,7 @@ body {
     font-weight: 700;
     font-size: 1.2rem;
     cursor: pointer;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -612,8 +616,10 @@ textarea:focus {
     bottom: 30px;
     left: 20px;
     right: 20px;
-    background: #3d2b1f; /* Darker brown bar */
-    color: #dfc18d; /* Gold text */
+    background: #3d2b1f;
+    /* Darker brown bar */
+    color: #dfc18d;
+    /* Gold text */
     border: none;
     padding: 16px 24px;
     border-radius: 20px;
@@ -793,8 +799,15 @@ textarea:focus {
 }
 
 @keyframes slideDown {
-    from { transform: translateY(-20px); opacity: 0; }
-    to { transform: translateY(0); opacity: 1; }
+    from {
+        transform: translateY(-20px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
 }
 
 .hidden {
