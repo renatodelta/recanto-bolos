@@ -16,7 +16,7 @@ let products = [
         category: "bolos",
         name: "Bolo de milho",
         price: 22.99,
-        desc: "Bolo de milho fofinho e artesanal.",
+        desc: "Feito com milho selecionado, textura fofinha e sabor caseiro que lembra café da tarde em família.",
         image: "imgs/milho.webp"
     },
     {
@@ -24,7 +24,7 @@ let products = [
         category: "bolos",
         name: "Bolo de laranja",
         price: 19.99,
-        desc: "Bolo de laranja fresco e aromático.",
+        desc: "Macio, aromático e preparado com laranjas frescas para um sabor leve e irresistível.",
         image: "imgs/laranja.webp"
     },
     {
@@ -32,7 +32,7 @@ let products = [
         category: "bolos",
         name: "Bolo de limão",
         price: 22.99,
-        desc: "Bolo de limão refrescante com cobertura deliciosa.",
+        desc: "Bolo fofinho com toque cítrico equilibrado e cobertura cremosa de limão.",
         image: "imgs/limao.webp"
     },
     {
@@ -40,7 +40,7 @@ let products = [
         category: "bolos",
         name: "Bolo de banana",
         price: 19.99,
-        desc: "Bolo de banana caseiro e nutritivo.",
+        desc: "Receita artesanal com bananas maduras, trazendo maciez e um sabor naturalmente doce.",
         image: "imgs/banana.webp"
     },
     {
@@ -48,7 +48,7 @@ let products = [
         category: "bolos",
         name: "Bolo de fubá com goiabada",
         price: 19.99,
-        desc: "O clássico bolo de fubá com cobertura de goiabada.",
+        desc: "O clássico da cozinha brasileira: bolo de fubá macio com deliciosos pedaços de goiabada.",
         image: "imgs/fuba.webp"
     },
     {
@@ -56,7 +56,7 @@ let products = [
         category: "bolos",
         name: "Bolo de cenoura",
         price: 24.99,
-        desc: "Bolo de cenoura com cobertura generosa de chocolate.",
+        desc: "Bolo de cenoura super fofinho com cobertura cremosa e generosa de chocolate.",
         image: "imgs/cenoura.webp"
     },
     {
@@ -64,15 +64,15 @@ let products = [
         category: "bolos",
         name: "Bolo de amendoim",
         price: 19.99,
-        desc: "Bolo artesanal de amendoim, crocante e saboroso.",
-        image: "imgs/amendoim.webp"
+        desc: "Sabor intenso de amendoim em uma receita artesanal macia e cheia de personalidade.",
+        image: "imgs/amendoin.webp"
     },
     {
         id: 8,
         category: "bolos",
         name: "Bolo de maçã com nozes",
         price: 22.99,
-        desc: "Bolo de maçã especial com pedaços de nozes.",
-        image: "imgs/maca-nozes.webp" // Ajustado para o arquivo existente
+        desc: "Combinação especial de maçãs frescas e nozes crocantes em um bolo delicado e acolhedor.",
+        image: "imgs/maca-nozes.webp"
     }
 ];
