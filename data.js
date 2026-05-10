@@ -8,9 +8,7 @@ let storeData = {
     deliveryFee: 5.00
 };
 
-let categories = [
-    { id: "bolos", name: "Bolos Caseiros" }
-];
+let categories = [];
 
 let products = [
     {
