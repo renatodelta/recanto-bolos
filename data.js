@@ -48,7 +48,7 @@ let products = [
         category: "bolos",
         name: "Bolo de fubá com goiabada",
         price: 19.99,
-        desc: "O clássico bolo de fubá com pedaços de goiabada.",
+        desc: "O clássico bolo de fubá com cobertura de goiabada.",
         image: "imgs/fuba.webp"
     },
     {
@@ -73,6 +73,6 @@ let products = [
         name: "Bolo de maçã com nozes",
         price: 22.99,
         desc: "Bolo de maçã especial com pedaços de nozes.",
-        image: "imgs/maca-canela.webp" // Ajustado para o arquivo existente
+        image: "imgs/maca-nozes.webp" // Ajustado para o arquivo existente
     }
 ];
