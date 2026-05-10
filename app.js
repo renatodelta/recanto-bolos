@@ -451,13 +451,13 @@ function showInstallPromotion() {
     const banner = document.createElement('div');
     banner.id = 'pwa-install-banner';
     banner.innerHTML = `
-        <div style="position: fixed; bottom: 80px; left: 10px; right: 10px; background: #4a3728; color: white; padding: 15px; border-radius: 10px; z-index: 1000; display: flex; justify-content: space-between; align-items: center; box-shadow: 0 4px 10px rgba(0,0,0,0.3);">
+        <div style="position: fixed; bottom: 100px; left: 10px; right: 10px; background: #4a3728; color: white; padding: 15px; border-radius: 12px; z-index: 1000; display: flex; justify-content: space-between; align-items: center; box-shadow: 0 4px 15px rgba(0,0,0,0.4); border: 1px solid rgba(201, 166, 107, 0.3);">
             <div>
                 <strong style="display:block;">Instalar Aplicativo</strong>
                 <span style="font-size: 0.9em;">Acesse nosso cardápio mais rápido!</span>
             </div>
-            <button id="btn-install-pwa" style="background: #c9a66b; color: #4a3728; border: none; padding: 8px 15px; border-radius: 5px; font-weight: bold; cursor: pointer;">Instalar</button>
-            <button onclick="this.parentElement.parentElement.remove()" style="background: transparent; border: none; color: white; margin-left: 10px; font-size: 1.2em;">&times;</button>
+            <button id="btn-install-pwa" style="background: #c9a66b; color: white; border: none; padding: 10px 18px; border-radius: 8px; font-weight: bold; cursor: pointer;">Instalar</button>
+            <button onclick="this.parentElement.parentElement.remove()" style="background: transparent; border: none; color: white; margin-left: 10px; font-size: 1.5em; line-height: 1;">&times;</button>
         </div>
     `;
     document.body.appendChild(banner);
