@@ -166,13 +166,14 @@ body {
     justify-content: center;
 }
 
-.search-container input {
+.search-container input,
+#product-search {
     width: 100%;
-    padding: 16px 50px 16px 24px;
-    border-radius: 999px;
+    padding: 18px 55px 18px 28px;
+    border-radius: 9999px !important;
     border: none;
     background: white;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
     font-size: 1rem;
     color: var(--text-main);
     outline: none;
