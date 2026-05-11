@@ -208,8 +208,8 @@ body {
 
 .search-container input {
     width: 100%;
-    padding: 18px 55px 18px 28px; /* Slightly more padding for the extra roundness */
-    border-radius: 100px;
+    padding: 20px 60px 20px 32px; /* Taller field for better pill shape */
+    border-radius: 999px;
     border: 2px solid var(--bg-color); /* Subtle border for definition */
     background: white;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
