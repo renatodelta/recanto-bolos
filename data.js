@@ -34,7 +34,7 @@ let products = [
         name: "Bolo de limão",
         price: 22.99,
         desc: "Bolo fofinho com toque cítrico equilibrado e cobertura cremosa de limão.",
-        image: "imgs/limao.webp"
+        image: "imgs/limao2.webp"
     },
     {
         id: 4,
