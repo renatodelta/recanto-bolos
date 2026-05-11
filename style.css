@@ -198,7 +198,7 @@ body {
 /* Search Container repositioned to float at the bottom center of header */
 .search-container {
     position: absolute;
-    bottom: -35px;
+    bottom: -42px;
     left: 50%;
     transform: translateX(-50%);
     width: 92%;
