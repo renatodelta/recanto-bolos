@@ -58,7 +58,7 @@ let products = [
         name: "Bolo de cenoura",
         price: 24.99,
         desc: "Bolo de cenoura super fofinho com cobertura cremosa e generosa de chocolate.",
-        image: "imgs/cenourasdssss2.webp"
+        image: "imgs/cenoura2.webp"
     },
     {
         id: 7,
