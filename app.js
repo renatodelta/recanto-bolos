@@ -25,7 +25,7 @@ const checkStoreStatus = () => {
     const isOpen = currentTime >= openTime && currentTime < closeTime;
     
     if (isOpen) {
-        statusBadge.querySelector('.status-text').textContent = 'Aberto agora';
+        statusBadge.querySelector('.status-text').textContent = 'Aberto';
         statusBadge.classList.add('open');
         statusBadge.classList.remove('closed');
         closedBanner.classList.add('hidden');

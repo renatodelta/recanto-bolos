@@ -2,9 +2,9 @@ let storeData = {
     name: "Recanto Formoso",
     phone: "5512992595613", // Novo número do WhatsApp
     address: "Recanto Formoso, Taubaté - SP",
-    hours: "Seg a Dom: 07:00 às 20:00",
-    openingTime: "07:00",
-    closingTime: "20:00",
+    hours: "Seg a Dom: 09:00 às 19:00",
+    openingTime: "09:00",
+    closingTime: "19:00",
     deliveryFee: 5.00
 };
 

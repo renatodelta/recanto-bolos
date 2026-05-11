@@ -5,8 +5,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Recanto Formoso | Bolos Artesanais e Caseiros com Entrega</title>
-    <meta name="description" content="Encomende os melhores bolos artesanais e caseiros de Taubaté no Recanto Formoso. Bolos frescos, receitas de família e entrega rápida em Taubaté e região. Peça pelo WhatsApp!">
-    <meta name="keywords" content="bolos taubaté, bolo caseiro taubaté, entrega de bolos taubaté, recanto formoso, bolos artesanais">
+    <meta name="description"
+        content="Encomende os melhores bolos artesanais e caseiros de Taubaté no Recanto Formoso. Bolos frescos, receitas de família e entrega rápida em Taubaté e região. Peça pelo WhatsApp!">
+    <meta name="keywords"
+        content="bolos taubaté, bolo caseiro taubaté, entrega de bolos taubaté, recanto formoso, bolos artesanais">
     <link rel="icon" type="image/png" href="./favicon-96x96.png" sizes="96x96" />
     <link rel="shortcut icon" href="./favicon.ico" />
     <link rel="apple-touch-icon" sizes="180x180" href="./apple-touch-icon.png" />
@@ -16,19 +18,21 @@
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <meta name="theme-color" content="#4a3728">
     <link rel="canonical" href="https://bolos.recantoformoso.com/" />
-    
+
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://bolos.recantoformoso.com/">
     <meta property="og:title" content="Recanto Formoso | Bolos Artesanais">
-    <meta property="og:description" content="Encomende os melhores bolos artesanais e caseiros de Taubaté. Peça pelo nosso aplicativo!">
+    <meta property="og:description"
+        content="Encomende os melhores bolos artesanais e caseiros de Taubaté. Peça pelo nosso aplicativo!">
     <meta property="og:image" content="https://bolos.recantoformoso.com/imgs/logo-recanto-fundo-out.png">
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
     <meta property="twitter:url" content="https://bolos.recantoformoso.com/">
     <meta property="twitter:title" content="Recanto Formoso | Bolos Artesanais">
-    <meta property="twitter:description" content="Encomende os melhores bolos artesanais e caseiros de Taubaté. Peça pelo nosso aplicativo!">
+    <meta property="twitter:description"
+        content="Encomende os melhores bolos artesanais e caseiros de Taubaté. Peça pelo nosso aplicativo!">
     <meta property="twitter:image" content="https://bolos.recantoformoso.com/imgs/logo-recanto-fundo-out.png">
 
     <link rel="manifest" href="manifest.json" />
@@ -36,7 +40,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
-    
+
     <!-- JSON-LD Structured Data for Local SEO -->
     <script type="application/ld+json">
     {
@@ -60,8 +64,8 @@
         "dayOfWeek": [
           "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"
         ],
-        "opens": "07:00",
-        "closes": "20:00"
+        "opens": "09:00",
+        "closes": "19:00"
       },
       "areaServed": [
         {
@@ -95,12 +99,15 @@
                     <span class="status-dot"></span>
                     <span class="status-text">Fechado</span>
                 </div>
-                <span class="opening-hours">⏱ Seg a Dom: 07:00 às 20:00</span>
+                <div class="opening-details">
+                    <span class="opening-hours">| 🕒 Seg a Dom: 09:00 às 19:00</span>
+                    <span class="delivery-info">(Entregas disponíveis entre 13:00 e 17:00)</span>
+                </div>
             </div>
 
             <!-- Search Bar -->
             <div class="search-container">
-                <input type="text" id="product-search" placeholder="Buscar produtos...  🧀 🥮" onkeyup="filterMenu()">
+                <input type="text" id="product-search" placeholder="Buscar produtos...  🧀 🍰" onkeyup="filterMenu()">
                 <svg class="search-icon" viewBox="0 0 24 24" width="20" height="20" stroke="currentColor"
                     stroke-width="2" fill="none">
                     <circle cx="11" cy="11" r="8"></circle>
@@ -118,8 +125,9 @@
     <!-- Out of hours banner -->
     <div id="closed-banner" class="closed-banner hidden">
         <div class="banner-content">
-            <div class="banner-header-icon">🥮</div>
-            <p><strong>Estamos fora do horário de atendimento,</strong> mas você pode adiantar o seu pedido! Envie agora e ele será atendido assim que abrirmos.</p>
+            <div class="banner-header-icon">🍰</div>
+            <p><strong>Estamos fora do horário de atendimento,</strong> mas você pode adiantar o seu pedido! Envie agora
+                e ele será atendido assim que abrirmos.</p>
         </div>
     </div>
 
@@ -167,12 +175,12 @@
                         <label>Tipo de Entrega</label>
                         <div class="delivery-options">
                             <label class="radio-label">
-                                <input type="radio" name="delivery-type" value="entrega"
-                                    onchange="toggleAddress()">
+                                <input type="radio" name="delivery-type" value="entrega" onchange="toggleAddress()">
                                 Entregar em Casa
                             </label>
                             <label class="radio-label">
-                                <input type="radio" name="delivery-type" value="retirada" checked onchange="toggleAddress()">
+                                <input type="radio" name="delivery-type" value="retirada" checked
+                                    onchange="toggleAddress()">
                                 Retirar na Loja
                             </label>
                         </div>
@@ -218,7 +226,8 @@
 
     <footer class="main-footer">
         <p>&copy; 2026 Recanto Formoso - Todos os direitos reservados</p>
-        <p><a href="privacidade.html" style="color: #c9a66b; text-decoration: none; font-size: 0.8em;">Política de Privacidade</a></p>
+        <p><a href="privacidade.html" style="color: #c9a66b; text-decoration: none; font-size: 0.8em;">Política de
+                Privacidade</a></p>
         <p class="app-version">v<span id="app-version-val">0.0.0</span></p>
     </footer>
 
