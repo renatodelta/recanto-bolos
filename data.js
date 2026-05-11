@@ -18,7 +18,7 @@ let products = [
         name: "Bolo de milho",
         price: 22.99,
         desc: "Feito com milho selecionado, textura fofinha e sabor caseiro que lembra café da tarde em família.",
-        image: "imgs/milho.webp"
+        image: "imgs/milho2.webp"
     },
     {
         id: 2,
@@ -42,7 +42,7 @@ let products = [
         name: "Bolo de banana",
         price: 19.99,
         desc: "Receita artesanal com bananas maduras, trazendo maciez e um sabor naturalmente doce.",
-        image: "imgs/banana.webp"
+        image: "imgs/banana2.webp"
     },
     {
         id: 5,
