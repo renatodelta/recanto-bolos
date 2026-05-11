@@ -12,18 +12,18 @@ const formatPrice = (price) => {
 const checkStoreStatus = () => {
     const statusBadge = document.getElementById('store-status');
     const closedBanner = document.getElementById('closed-banner');
-    
+
     const now = new Date();
     const currentTime = now.getHours() * 100 + now.getMinutes();
-    
+
     const [openH, openM] = storeData.openingTime.split(':').map(Number);
     const [closeH, closeM] = storeData.closingTime.split(':').map(Number);
-    
+
     const openTime = openH * 100 + openM;
     const closeTime = closeH * 100 + closeM;
 
     const isOpen = currentTime >= openTime && currentTime < closeTime;
-    
+
     if (isOpen) {
         statusBadge.querySelector('.status-text').textContent = 'Aberto';
         statusBadge.classList.add('open');
@@ -40,7 +40,7 @@ const checkStoreStatus = () => {
 // Renderiza o cardápio
 const renderMenu = (filterQuery = '') => {
     const menuSection = document.getElementById('menu-section');
-    menuSection.innerHTML = ''; 
+    menuSection.innerHTML = '';
 
     const query = filterQuery.toLowerCase().trim();
 
@@ -49,8 +49,8 @@ const renderMenu = (filterQuery = '') => {
         categories.forEach(category => {
             let categoryProducts = products.filter(p => p.category === category.id);
             if (query) {
-                categoryProducts = categoryProducts.filter(p => 
-                    p.name.toLowerCase().includes(query) || 
+                categoryProducts = categoryProducts.filter(p =>
+                    p.name.toLowerCase().includes(query) ||
                     (p.desc && p.desc.toLowerCase().includes(query))
                 );
             }
@@ -59,7 +59,7 @@ const renderMenu = (filterQuery = '') => {
             const categoryBlock = document.createElement('div');
             categoryBlock.classList.add('category-block');
             categoryBlock.id = `cat-${category.id}`;
-            
+
             const categoryTitle = document.createElement('h2');
             categoryTitle.classList.add('category-title');
             categoryTitle.textContent = category.name;
@@ -104,8 +104,8 @@ const renderMenu = (filterQuery = '') => {
         // Se NÃO houver categorias, renderiza todos os produtos em um único grid
         let filteredProducts = products;
         if (query) {
-            filteredProducts = products.filter(p => 
-                p.name.toLowerCase().includes(query) || 
+            filteredProducts = products.filter(p =>
+                p.name.toLowerCase().includes(query) ||
                 (p.desc && p.desc.toLowerCase().includes(query))
             );
         }
@@ -166,10 +166,10 @@ const renderCategoryNav = () => {
         const item = document.createElement('a');
         item.classList.add('nav-item');
         if (cat.id === 'ofertas') item.classList.add('bold');
-        
+
         item.textContent = cat.name.replace(/[^\w\sÀ-ú]/g, '').trim(); // Remove emojis para a barra de nav como no anexo
         item.onclick = () => scrollToCategory(cat.id);
-        
+
         nav.appendChild(item);
     });
 };
@@ -209,7 +209,7 @@ const addToCart = (productId) => {
     if (!product) return;
 
     const existingItem = cart.find(item => item.id === productId);
-    
+
     if (existingItem) {
         existingItem.qty += 1;
     } else {
@@ -224,11 +224,11 @@ const changeQty = (productId, delta) => {
     const itemIndex = cart.findIndex(item => item.id === productId);
     if (itemIndex > -1) {
         cart[itemIndex].qty += delta;
-        
+
         if (cart[itemIndex].qty <= 0) {
             cart.splice(itemIndex, 1);
         }
-        
+
         updateCartUI();
     }
 };
@@ -261,7 +261,7 @@ const updateCartUI = () => {
 
         const itemEl = document.createElement('div');
         itemEl.classList.add('cart-item');
-        
+
         itemEl.innerHTML = `
             <div class="cart-item-info">
                 <div class="cart-item-name">${item.name}</div>
@@ -273,13 +273,13 @@ const updateCartUI = () => {
                 <button class="btn-qty" onclick="changeQty(${item.id}, 1)">+</button>
             </div>
         `;
-        
+
         cartItemsContainer.appendChild(itemEl);
     });
 
     cartCount.textContent = totalItems;
     floatCount.textContent = totalItems;
-    
+
     // Calcula taxas e total
     const deliveryTypeInput = document.querySelector('input[name="delivery-type"]:checked');
     const deliveryType = deliveryTypeInput ? deliveryTypeInput.value : 'entrega';
@@ -290,9 +290,9 @@ const updateCartUI = () => {
     const subtotalEl = document.getElementById('subtotal-price');
     const deliveryFeeRow = document.getElementById('delivery-fee-row');
     const deliveryFeeEl = document.getElementById('delivery-fee-value');
-    
+
     if (subtotalEl) subtotalEl.textContent = formatPrice(totalPrice);
-    
+
     if (deliveryFeeRow && deliveryFeeEl) {
         if (deliveryType === 'entrega') {
             deliveryFeeRow.classList.remove('hidden');
@@ -304,18 +304,18 @@ const updateCartUI = () => {
 
     const floatTotal = document.getElementById('floating-cart-total');
     if (floatTotal) floatTotal.textContent = formatPrice(finalTotal);
-    
+
     totalPriceEl.textContent = formatPrice(finalTotal);
-    
+
     cartSummary.classList.remove('hidden');
-    
+
     // Feedback visual no botão flutuante
     const floatBtn = document.getElementById('floating-cart');
     if (floatBtn) {
         floatBtn.classList.add('pulse');
         setTimeout(() => floatBtn.classList.remove('pulse'), 300);
     }
-    
+
     // Sincroniza os botões do cardápio
     renderMenu();
 };
@@ -325,7 +325,7 @@ const toggleAddress = () => {
     const deliveryType = document.querySelector('input[name="delivery-type"]:checked').value;
     const addressGroup = document.getElementById('address-group');
     const addressInput = document.getElementById('customer-address');
-    
+
     if (deliveryType === 'retirada') {
         addressGroup.classList.add('hidden');
         addressInput.removeAttribute('required');
@@ -354,7 +354,7 @@ const sendToWhatsApp = () => {
 
     const deliveryType = document.querySelector('input[name="delivery-type"]:checked').value;
     const address = document.getElementById('customer-address').value.trim();
-    
+
     if (deliveryType === 'entrega' && !address) {
         alert("Por favor, preencha o endereço de entrega.");
         document.getElementById('customer-address').focus();
@@ -367,19 +367,19 @@ const sendToWhatsApp = () => {
     let message = `*Novo Pedido - ${storeData.name}*\n\n`;
     message += `*Cliente:* ${name}\n`;
     message += `*Tipo:* ${deliveryType === 'entrega' ? '🛵 Entrega' : '🏪 Retirada'}\n`;
-    
+
     if (deliveryType === 'entrega') {
         message += `*Endereço:* ${address}\n`;
     }
-    
+
     message += `\n*Itens do Pedido:*\n`;
-    
+
     let subtotal = 0;
     cart.forEach(item => {
         message += `• ${item.qty}x ${item.name} - ${formatPrice(item.price * item.qty)}\n`;
         subtotal += (item.price * item.qty);
     });
-    
+
     const deliveryFee = deliveryType === 'entrega' ? (storeData.deliveryFee || 0) : 0;
     const total = subtotal + deliveryFee;
 
@@ -387,9 +387,9 @@ const sendToWhatsApp = () => {
         message += `\n*Subtotal:* ${formatPrice(subtotal)}\n`;
         message += `*Taxa de Entrega:* ${formatPrice(deliveryFee)}\n`;
     }
-    
+
     message += `\n*Total do Pedido:* ${formatPrice(total)}\n`;
-    
+
     if (notes) {
         message += `\n*Observações:* ${notes}\n`;
     }
@@ -397,7 +397,7 @@ const sendToWhatsApp = () => {
     // Codifica a mensagem para a URL
     const encodedMessage = encodeURIComponent(message);
     const whatsappUrl = `https://wa.me/${storeData.phone}?text=${encodedMessage}`;
-    
+
     // Redireciona
     window.open(whatsappUrl, '_blank');
 };
@@ -418,12 +418,12 @@ window.onload = () => {
     }
     renderMenu();
     toggleAddress(); // Ajusta estado inicial do endereço
-    
+
     // Define a versão no rodapé
     if (document.getElementById('app-version-val')) {
         document.getElementById('app-version-val').textContent = storeData.version || "1.0.0";
     }
-    
+
     // Atualiza status a cada minuto
     setInterval(checkStoreStatus, 60000);
 };
@@ -434,10 +434,10 @@ let deferredPrompt;
 window.addEventListener('beforeinstallprompt', (e) => {
     // Prevent the mini-infobar from appearing on mobile
     e.preventDefault();
-    
+
     // Verifica se o usuário está em um dispositivo móvel
     const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
-    
+
     if (isMobile) {
         // Stash the event so it can be triggered later.
         deferredPrompt = e;

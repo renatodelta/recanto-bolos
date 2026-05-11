@@ -160,7 +160,12 @@ body {
 .opening-details {
     display: flex;
     flex-direction: column;
+    align-items: center;
     gap: 4px;
+}
+
+.hours-sep {
+    display: none;
 }
 
 .delivery-info {
@@ -176,11 +181,17 @@ body {
         border-radius: 100px;
         gap: 15px;
     }
-    
+
     .opening-details {
         flex-direction: column;
         align-items: flex-start;
         text-align: left;
+    }
+
+    .hours-sep {
+        display: inline;
+        margin-right: 5px;
+        opacity: 0.5;
     }
 }
 
