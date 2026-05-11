@@ -1,4 +1,4 @@
-const CACHE_NAME = 'bolos-pwa-v3';
+const CACHE_NAME = 'bolos-pwa-v1.0.1';
 const urlsToCache = [
   './',
   './index.html',

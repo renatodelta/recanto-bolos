@@ -5,7 +5,8 @@ let storeData = {
     hours: "Seg a Dom: 09:00 às 19:00",
     openingTime: "09:00",
     closingTime: "19:00",
-    deliveryFee: 5.00
+    deliveryFee: 5.00,
+    version: "1.0.1"
 };
 
 let categories = [];
