@@ -26,7 +26,7 @@ let products = [
         name: "Bolo de laranja",
         price: 19.99,
         desc: "Macio, aromático e preparado com laranjas frescas para um sabor leve e irresistível.",
-        image: "imgs/laranja.webp"
+        image: "imgs/laranja2.webp"
     },
     {
         id: 3,
@@ -58,7 +58,7 @@ let products = [
         name: "Bolo de cenoura",
         price: 24.99,
         desc: "Bolo de cenoura super fofinho com cobertura cremosa e generosa de chocolate.",
-        image: "imgs/cenoura.webp"
+        image: "imgs/cenourasdssss2.webp"
     },
     {
         id: 7,
